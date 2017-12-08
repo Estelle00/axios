@@ -1,6 +1,6 @@
 import { createAPI } from '../util'
 
 
-const baseUrl =  baseURL
+const baseUrl = '/har-self-web/wx'
 
 export default createAPI(baseUrl)
