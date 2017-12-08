@@ -5,7 +5,7 @@ import { convertRESTAPI } from '{{$$.relative("util")}}'
 function {{$$.convertMethod(mock)}} (opts) {
   return instance({
     method: '{{mock.method}}',
-    url:<% if($$.isREST(mock.url)) {%>convertRESTAPI('{{mock.url}}', opts)<%} else {%> '{{mock.url}}'<% } %>,
+    url: <% if($$.isREST(mock.url)) {%>convertRESTAPI('{{mock.url}}', opts)<%} else {%>'{{mock.url}}'<% } %>,
     opts: opts
   })
 }
