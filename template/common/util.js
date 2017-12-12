@@ -55,7 +55,12 @@ function convertRESTAPI (url, opts) {
   return url
 }
 
+function isJson(obj) {
+  return Object.prototype.toString.call(obj) === '[object object]'
+}
+
 export {
   createAPI,
-  convertRESTAPI
+  convertRESTAPI,
+  isJson
 }

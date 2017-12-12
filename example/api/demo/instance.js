@@ -1,5 +1,5 @@
-import { createAPI } from '../util' 
+import { createAPI, isJson } from '../util' 
 import config from '../config'
 const baseURL = config.baseURL
-const baseUrl = (typeof baseURL === 'string') ? baseURL : baseURL['demo']
+const baseUrl = isJson(baseURL) ? baseURL['demo'] : baseURL
 export default createAPI(baseUrl)
