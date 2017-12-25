@@ -56,7 +56,7 @@ function convertRESTAPI (url, opts) {
 }
 
 function isJson(obj) {
-  return Object.prototype.toString.call(obj) === '[object object]'
+  return Object.prototype.toString.call(obj).toLowerCase() === '[object object]'
 }
 
 export {
